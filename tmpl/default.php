@@ -13,8 +13,9 @@ $(document).ready(function() {
 });
 </script>
 
+<div  id="quiz_form">
 <?php if (isset($q)): ?>
-<form action="<?php echo $url; ?>" method="post" id="quiz_form">
+<form action="<?php echo $url; ?>" method="post">
 	<?php echo $q->name; ?>
 	<br/>
 	&nbsp;
@@ -45,4 +46,5 @@ $(document).ready(function() {
 <?php ?>
 	<a href="<?php echo $url; ?>">Перейти к результатам викторины</a>
 <?php endif; ?>
+</div>
 
