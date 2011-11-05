@@ -1,9 +1,14 @@
 <?php // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
-<?php $url =  JRoute::_('index.php') . '?option=com_miniquiz'; ?>
+<?php $url =  /*JRoute::_('index.php')*/ '?index.php' . '?option=com_miniquiz'; ?>
+<style>
+<!--
+.right-slider {display: none;}
+-->
+</style>
 <?php if (isset($q)): ?>
-<form action="<?php echo $url; ?>" method="post">
+<form action="<?php echo $url; ?>" method="post" >
 	<?php echo $q->name; ?>
 	<br/>
 	&nbsp;
@@ -32,8 +37,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 </form>
 <?php else: ?>
 <?php ?>
-<ul class="menu">
-	<li><a href="<?php echo $url; ?>">Перейти к результатам викторины</a></li>
-</ul>
+	<a href="<?php echo $url; ?>">Перейти к результатам викторины</a>
 <?php endif; ?>
 
