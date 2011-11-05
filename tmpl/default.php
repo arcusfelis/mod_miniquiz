@@ -8,8 +8,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
 <script>
 $(document).ready(function() {
-	$("#quiz_form")
-    	.after("#Map");
+	$("#Map")
+    	.after($("#quiz_form"));
 });
 </script>
 
