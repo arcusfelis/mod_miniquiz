@@ -3,12 +3,18 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
 <?php $url =  /*JRoute::_('index.php')*/ '?index.php' . '?option=com_miniquiz'; ?>
 <style>
-<!--
 .right-slider {display: none;}
--->
 </style>
+
+<script>
+$(document).ready(function() {
+	$("#quiz_form")
+    	.appendAfter(".right-slider");
+});
+</script>
+
 <?php if (isset($q)): ?>
-<form action="<?php echo $url; ?>" method="post" >
+<form action="<?php echo $url; ?>" method="post" id="quiz_form">
 	<?php echo $q->name; ?>
 	<br/>
 	&nbsp;
