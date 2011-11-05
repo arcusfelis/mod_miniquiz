@@ -4,6 +4,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 <?php $url =  /*JRoute::_('index.php')*/ '?index.php' . '?option=com_miniquiz'; ?>
 <style>
 .right-slider {display: none;}
+
+#quiz_form
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 190px;
+}
 </style>
 
 <script>
