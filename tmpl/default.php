@@ -9,7 +9,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 <script>
 $(document).ready(function() {
 	$("#quiz_form")
-    	.appendAfter(".right-slider");
+    	.after("#Map");
 });
 </script>
 
