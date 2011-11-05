@@ -1,7 +1,7 @@
 <?php // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
-<?php $url =  /*JRoute::_('index.php')*/ '?index.php' . '?option=com_miniquiz'; ?>
+<?php $url =  /*JRoute::_('index.php')*/ './index.php' . '?option=com_miniquiz'; ?>
 <style>
 .right-slider {display: none;}
 
