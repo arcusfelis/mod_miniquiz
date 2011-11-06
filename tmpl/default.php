@@ -1,20 +1,29 @@
 <?php // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
-<?php $url =  /*JRoute::_('index.php')*/ './index.php' . '?option=com_miniquiz'; ?>
+<?php $url =  /*JRoute::_('index.php')*/ '/index.php' . '?option=com_miniquiz'; ?>
 <style>
 .item-page {display: none;}
+#quiz_form form {
+	display: <?php echo ($hide ? 'none' : 'block'); ?>
+}
 </style>
 
 <script>
 $(document).ready(function() {
 	$(".item-page")
     	.after($("#quiz_form"));
+
+	$("#quiz_trigger").click(function() {
+		$("#quiz_links").hide();
+		$("#quiz_form form").show();
+	});
 });
 </script>
 
 <div  id="quiz_form">
 <h2>Арт-викторина</h2>
+
 
 <?php if (isset($q)): ?>
 <form action="<?php echo $url; ?>" method="post">
@@ -44,9 +53,11 @@ $(document).ready(function() {
     <input type="hidden" name="id" value="<?php echo $q->id; ?>" />
     <input type="submit" class="button" value="Ответить" />
 </form>
-<?php else: ?>
-<?php ?>
-	<a href="<?php echo $url; ?>">Перейти к результатам викторины</a>
 <?php endif; ?>
+
+<div id="quiz_links">
+	  <a href="<?php echo $url; ?>">Перейти к результатам викторины</a>
+	| <a href="#" id="quiz_trigger">Ответить на другой вопрос</a>
+</div>
 </div>
 
