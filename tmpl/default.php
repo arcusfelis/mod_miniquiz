@@ -3,20 +3,12 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
 <?php $url =  /*JRoute::_('index.php')*/ './index.php' . '?option=com_miniquiz'; ?>
 <style>
-.right-slider {display: none;}
-
-#quiz_form
-{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 190px;
-}
+.item-page {display: none;}
 </style>
 
 <script>
 $(document).ready(function() {
-	$("#Map")
+	$(".item-page")
     	.after($("#quiz_form"));
 });
 </script>
