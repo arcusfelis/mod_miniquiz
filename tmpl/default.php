@@ -14,6 +14,8 @@ $(document).ready(function() {
 </script>
 
 <div  id="quiz_form">
+<h2>Арт-викторина</h2>
+
 <?php if (isset($q)): ?>
 <form action="<?php echo $url; ?>" method="post">
 	<?php echo $q->name; ?>
