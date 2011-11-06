@@ -7,6 +7,9 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 #quiz_form form {
 	display: <?php echo ($hide ? 'none' : 'block'); ?>
 }
+#quiz_links {
+	display: <?php echo ($hide ? 'block' : 'none'); ?>
+}
 </style>
 
 <script>
